@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "快速安装对应的 types 包",
   "main": "index.js",
+  "bin": {
+    "yarnt": "./dist/yarnt.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
     "clean": "rm -rf ./dist",
-    "build": "yarn clean && tsc && chmod +x dist/fast-create.js",
+    "build": "yarn clean && tsc",
     "prepare": "yarn build",
     "check-types": "tsc --noEmit",
     "check-formatting": "prettier --check '**/*.{js,json,md,tsx,ts}'"
@@ -28,6 +34,9 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@types/args": "^3.0.0",
+    "@types/chalk": "^2.2.0",
+    "@types/node": "^14.14.10",
     "eslint": "^7.15.0",
     "eslint-plugin-prettier": "^3.2.0",
     "husky": "^4.3.4",
@@ -45,5 +54,9 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "args": "^5.0.1",
+    "chalk": "^4.1.0"
   }
 }
