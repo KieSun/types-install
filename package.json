@@ -1,6 +1,6 @@
 {
   "name": "types-install",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "快速安装对应的 types 包",
   "main": "index.js",
   "bin": {
